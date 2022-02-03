@@ -1,16 +1,24 @@
 import { IUser } from "../../mongo/entities/user.entity";
 import { UserModel } from "../../mongo/models/user.model";
 
-export const AuthContoller = {
+export const AuthRepository = {
   async regiser(user: IUser) {
-    await UserModel.create(user);
+    return UserModel.create(user);
   },
 
-  async getByUsername(username: string) {
+  async getByEmail(username: string) {
     return UserModel.findOne({ email: username }).lean();
   },
 
-  async updatePassword(user: IUser) {
-      return UserModel.findOneAndUpdate({email: user.email}, {password: user.password});
-  }
+  async updateSecurity(email: string, passwordResetCode: number) {
+      return UserModel.findOneAndUpdate({email}, {passwordResetCode}).lean();
+  },  
+  
+  async updatePassword(email: string, password: string) {
+      return UserModel.findOneAndUpdate({email}, {password, passwordResetCode: 0}).lean();
+  },
+
+  async isEmailExists(email: string) {
+    return UserModel.exists({ email});
+  },
 };

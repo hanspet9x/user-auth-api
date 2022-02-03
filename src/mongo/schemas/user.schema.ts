@@ -5,5 +5,4 @@ export const UserSchema = new Schema<IUser>({
     email: String,
     password: String,
     createdAt: Date
-})
-;
+});
