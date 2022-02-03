@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "5747298a-e642-4db2-9d8c-4d7666c6754b",
+		"name": "Auth service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"payodeji7@gmail.com\",\r\n    \"password\": \"akin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"payodeji7@gmail.com\",\r\n    \"password\": \"akin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "246"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f6-FQD2p4h1OX9pGn1rSwTEXPkQW/U\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 03 Feb 2022 07:54:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": false,\n    \"data\": {\n        \"email\": \"payodeji7@gmail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBheW9kZWppN0BnbWFpbC5jb20iLCJpYXQiOjE2NDM4NzQ4ODQsImV4cCI6MTY0Mzg3ODQ4NH0.onuiNY2J8Mhsi8IABZ_FOUdsDk4DoVgHCpue1v0NBiw\"\n    },\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"payodeji4@gmail.com\",\r\n    \"password\": \"akin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"payodeji0@gmail.com\",\r\n    \"password\": \"akin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "246"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f6-tuAKEBEzuuRTvIksi9QOg/HynnM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 03 Feb 2022 08:01:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": false,\n    \"data\": {\n        \"email\": \"payodeji0@gmail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBheW9kZWppMEBnbWFpbC5jb20iLCJpYXQiOjE2NDM4NzUzMTIsImV4cCI6MTY0Mzg3ODkxMn0.uFjX8xDYsZ7haHA0uZateSG_hlMAbMavzD7AwPD04yU\"\n    },\n    \"status\": 201\n}"
+				}
+			]
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"payodeji7@gmail.com\",\r\n    \"password\": \"akin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initiate reset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"payodeji7@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/initiate-reset-password",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"initiate-reset-password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "initiate reset",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"payodeji7@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/initiate-reset-password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"initiate-reset-password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "227"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e3-kcY3EfcIW1uq4m7VEd+pGlXBsTs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 03 Feb 2022 08:03:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": false,\n    \"data\": \"A security code has been sent to your email. This should be used to reset your password.\",\n    \"status\": 200,\n    \"message\": \"A security code has been sent to your email. This should be used to reset your password.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "confirmToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBheW9kZWppN0BnbWFpbC5jb20iLCJpYXQiOjE2NDM4NzQyMDUsImV4cCI6MTY0Mzg3NzgwNX0.OCs3SPcQt147fQgzJ2PgcMkcKon5VsfiBMNXEcY44Uk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/confirm-token",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"confirm-token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "confirmToken",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBheW9kZWppN0BnbWFpbC5jb20iLCJpYXQiOjE2NDM4NzQyMDUsImV4cCI6MTY0Mzg3NzgwNX0.OCs3SPcQt147fQgzJ2PgcMkcKon5VsfiBMNXEcY44Uk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/confirm-token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"confirm-token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-jDnn615h9akGEpPF/BAAkCqmZho\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 03 Feb 2022 08:02:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": false,\n    \"data\": false,\n    \"status\": 200,\n    \"message\": false\n}"
+				}
+			]
+		}
+	]
+}
