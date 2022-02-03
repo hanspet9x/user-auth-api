@@ -14,5 +14,9 @@ export const authValidation = {
         email: Joi.string().required().email(),
         password: Joi.string().required(),
         securityCode: Joi.number().required().min(4).max(5)
-    })
+    }),
+
+    token: Joi.object({
+        token: Joi.string().required()
+    }),
 }

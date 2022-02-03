@@ -1,6 +1,8 @@
 export const AppRoutes = {
+    auth: '/auth',
     login: '/login',
-    regiser: '/regiser',
+    regiser: '/register',
     resetPassword: '/reset-password',
-    initiatePasswordReset: '/initiate-reset-password'
+    initiatePasswordReset: '/initiate-reset-password',
+    confirmToken: '/confirm-token'
 }

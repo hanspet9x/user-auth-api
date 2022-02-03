@@ -4,7 +4,8 @@ import { appConfigs } from './../../configs/app';
 
 export const TokenService =  {
 
-    get(payload: string){
+    get(payload: object){
+        console.log(payload, appConfigs.jwtSecret, {expiresIn: appConfigs.jwtExpire});
         return token.sign(payload, appConfigs.jwtSecret, {expiresIn: appConfigs.jwtExpire})
     },
 

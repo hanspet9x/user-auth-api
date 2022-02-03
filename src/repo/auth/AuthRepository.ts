@@ -16,9 +16,17 @@ export const AuthRepository = {
   
   async updatePassword(email: string, password: string) {
       return UserModel.findOneAndUpdate({email}, {password, passwordResetCode: 0}).lean();
+  },  
+  
+  async updateToken(email: string, token: string) {
+      return UserModel.findOneAndUpdate({email}, {token}).lean();
   },
 
   async isEmailExists(email: string) {
     return UserModel.exists({ email});
+  },
+
+  async isTokenExists(email: string, token: string) {
+    return UserModel.exists({ email, token});
   },
 };

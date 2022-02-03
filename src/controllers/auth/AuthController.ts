@@ -11,7 +11,6 @@ import { authValidation } from './auth.joi';
 const AuthContoller = express.Router();
 
 AuthContoller.post(AppRoutes.login, 
-    validateTokenMiddleware(),
     validateSchemaMiddleware(authValidation.auth),
     async (request: Request, response: Response) => {
         const body: IAuth = request.body;
@@ -67,3 +66,19 @@ AuthContoller.post(AppRoutes.resetPassword,
             return;
         }
 });
+
+AuthContoller.post(AppRoutes.confirmToken, 
+    validateSchemaMiddleware(authValidation.token),
+    async (request: Request, response: Response) => {
+        const body: string = request.body.token;
+        try {
+            const res = await AuthService.confirmToken(body);
+            ResponseService.json(response, res, 200, res);
+            return;
+        } catch (error: any) {
+            ResponseService.error(response, error.message, 403);
+            return;
+        }
+});
+
+export default AuthContoller;
